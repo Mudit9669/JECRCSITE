@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+/* Navbar */
+.navbar ul li a{
+    list-style: none;
+    text-decoration: none;
+    margin: 40px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+.navbar ul li a:hover{
+    color: grey;
+    transition-delay: 0.1s;
+    border-bottom: 3px white solid;
+}
+.navbar ul li{
+    list-style: none;
+}
+.nav-menu{
+    display: flex;
+    flex-direction: row;
+}
+.logo{
+    display: flex;
+    padding-left: 25px;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    background-color: #192F59;
+    min-height: 70px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+}
+/* burger */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+/* college image */
+.clgimg{
+    height: 100%;
+}
+
+
+/* responsive */
+
+@media(max-width:1130px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 100px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #192F59;
+        text-align:center;
+        transition: 0.3s;
+        height: 100%;
+    }
+    .nav-item{
+        margin:25px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+}
+
